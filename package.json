@@ -1,0 +1,63 @@
+{
+  "name": "vscode-vbcc",
+  "displayName": "VBCC Atari ST",
+  "description": "VBCC compiler support for Atari ST development",
+  "version": "0.1.0",
+  "publisher": "AndresVettori",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Debuggers",
+    "Other"
+  ],
+  "activationEvents": [
+    "onLanguage:c",
+    "onCommand:vscode-vbcc.compile",
+    "onCommand:vscode-vbcc.run"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "vscode-vbcc.compile",
+        "title": "VBCC: Compile Current File"
+      },
+      {
+        "command": "vscode-vbcc.run",
+        "title": "VBCC: Run in Hatari"
+      }
+    ],
+    "problemMatchers": [
+      {
+        "name": "vbcc",
+        "owner": "c",
+        "fileLocation": [
+          "relative",
+          "${workspaceFolder}"
+        ],
+        "pattern": {
+          "regexp": "^(.*)\\((\\d+)\\):\\s+(warning|error):\\s+(.*)$",
+          "file": 1,
+          "line": 2,
+          "severity": 3,
+          "message": 4
+        }
+      }
+    ]
+  },
+  "devDependencies": {
+    "@types/node": "^16.0.0",
+    "@types/vscode": "^1.60.0",
+    "@vscode/vsce": "^2.15.0",
+    "typescript": "^4.4.3",
+    "vscode": "^1.1.34"
+  },
+  "scripts": {
+    "package": "vsce package",
+    "postinstall": "node ./node_modules/vscode/bin/install",
+    "test": "node ./node_modules/vscode/bin/test"
+  }
+}
