@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "publisher": "AndresVettori",
   "license": "MIT",
+  "repository": "https://github.com/andresvettori/vscode-vbcc",
   "engines": {
     "vscode": "^1.60.0"
   },
