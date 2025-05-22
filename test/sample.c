@@ -7,9 +7,9 @@ int main(void)
     appl_init();
     
     /* Open virtual workstation */
-    int work_in[11] = {1,1,1,1,1,1,1,1,1,1,2};
-    int work_out[57];
-    int handle = graf_handle(&work_out[0], &work_out[1], &work_out[2], &work_out[3]);
+    short work_in[11] = {1,1,1,1,1,1,1,1,1,1,2};
+    short work_out[57];
+    short handle = graf_handle(&work_out[0], &work_out[1], &work_out[2], &work_out[3]);
     v_opnvwk(work_in, &handle, work_out);
     
     /* Display alert box with message */

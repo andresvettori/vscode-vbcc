@@ -67,3 +67,7 @@ Initial release of VBCC Atari ST extension:
 - Basic compilation support
 - Hatari integration
 - Error/warning detection
+
+
+## Instructions to publish an VSCode extension:
+https://code.visualstudio.com/api/working-with-extensions/publishing-extension#publishing-extensions
