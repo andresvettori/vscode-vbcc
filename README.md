@@ -68,6 +68,12 @@ Initial release of VBCC Atari ST extension:
 - Hatari integration
 - Error/warning detection
 
+### 0.1.1
+
+Added more commands:
+- Build a file for TOS, TOS16, GEM and GEM16 configurations.
+- Hatari integration with more intelligent path detection.
+- Add exetution of make command for the project.
 
 ## Instructions to publish an VSCode extension:
 https://code.visualstudio.com/api/working-with-extensions/publishing-extension#publishing-extensions

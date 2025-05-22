@@ -2,7 +2,7 @@
   "name": "vscode-vbcc",
   "displayName": "VBCC Atari ST",
   "description": "VBCC compiler support for Atari ST development",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "publisher": "AndresVettori",
   "license": "MIT",
   "repository": "https://github.com/andresvettori/vscode-vbcc",
@@ -16,15 +16,35 @@
   ],
   "activationEvents": [
     "onLanguage:c",
-    "onCommand:vscode-vbcc.compile",
+    "onCommand:vscode-vbcc.compile-tos32",
+    "onCommand:vscode-vbcc.compile-tos16",
+    "onCommand:vscode-vbcc.compile-gem32",
+    "onCommand:vscode-vbcc.compile-gem16",
+    "onCommand:vscode-vbcc.make",
     "onCommand:vscode-vbcc.run"
   ],
   "main": "./extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "vscode-vbcc.compile",
-        "title": "VBCC: Compile Current File"
+        "command": "vscode-vbcc.compile-tos32",
+        "title": "VBCC: Compile Current File for TOS 32bits"
+      },
+      {
+        "command": "vscode-vbcc.compile-tos16",
+        "title": "VBCC: Compile Current File for TOS 16bits"
+      },
+      {
+        "command": "vscode-vbcc.compile-gem32",
+        "title": "VBCC: Compile Current File for GEM 32bits"
+      },
+      {
+        "command": "vscode-vbcc.compile-gem16",
+        "title": "VBCC: Compile Current File for GEM 16bits"
+      },
+      {
+        "command": "vscode-vbcc.make",
+        "title": "VBCC: Compile project using current Makefile"
       },
       {
         "command": "vscode-vbcc.run",
